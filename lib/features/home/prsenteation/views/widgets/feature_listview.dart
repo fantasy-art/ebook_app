@@ -22,7 +22,7 @@ class FeatureListView extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         itemCount: bookItem.length,
         itemBuilder: (context, index) => Padding(
-          padding: EdgeInsets.symmetric(horizontal: 10),
+          padding: const EdgeInsets.symmetric(horizontal: 10),
           child: CustomListViewItem(
             imageName: bookItem[index],
           ),
