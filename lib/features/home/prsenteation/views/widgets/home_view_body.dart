@@ -54,15 +54,22 @@ class BestSellerListViewItem extends StatelessWidget {
           children: [
             Image.asset(AssetsData.b1, height: 100),
             const SizedBox(width: 30),
-            const Column(
+            Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text('Lost Legends', maxLines: 2, style: Styles.textStyle20),
-                Text(
+                SizedBox(
+                  width: MediaQuery.of(context).size.width * 0.5,
+                  child: const Text(
+                      'Lost Legends Lost Legends Lost Legends Lost Legends Lost Legends Lost Legends ',
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                      style: Styles.textStyle20),
+                ),
+                const Text(
                   'Alix Hirsch',
                   style: Styles.textStyle14,
                 ),
-                Row(
+                const Row(
                   children: [
                     Text(
                       '19.99 \$',
