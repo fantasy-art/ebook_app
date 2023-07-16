@@ -58,7 +58,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
   void naivgateToHome() {
     Future.delayed(
         kViewDuration,
-        () => Get.to(() => const HomeView(),
+        () => Get.off(() => const HomeView(),
             transition: Transition.fade, duration: kTranstionObjectDuration));
   }
 }
