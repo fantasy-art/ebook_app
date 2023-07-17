@@ -1,4 +1,5 @@
 import 'package:ebook_app/core/utils/styles.dart';
+import 'package:ebook_app/features/home/prsenteation/views/widgets/book_rating.dart';
 import 'package:flutter/material.dart';
 
 import 'package:ebook_app/core/utils/assets.dart';
@@ -25,11 +26,12 @@ class BookDetailViewBody extends StatelessWidget {
               style: Styles.textStyle24.copyWith(fontSize: 35)),
           const SizedBox(height: 6),
           Opacity(
-            opacity: 0.7,
-            child: Text('4 All-New Adventure',
-                style:
-                    Styles.textStyle16.copyWith(fontStyle: FontStyle.italic)),
-          ),
+              opacity: 0.7,
+              child: Text('4 All-New Adventure',
+                  style: Styles.textStyle16
+                      .copyWith(fontStyle: FontStyle.italic))),
+          const SizedBox(height: 16),
+          const BookRating(),
         ],
       ),
     );
