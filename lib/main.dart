@@ -1,9 +1,8 @@
-import 'package:ebook_app/constant.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'features/splash/persentation/views/splash_view.dart';
+import 'package:ebook_app/constant.dart';
+import 'package:ebook_app/core/utils/app_router.dart';
 
 void main() {
   runApp(const EBookApp());
@@ -14,13 +13,13 @@ class EBookApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
+    return MaterialApp.router(
+      routerConfig: AppRouter.router,
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark().copyWith(
         scaffoldBackgroundColor: kPrimeryColor,
         textTheme: GoogleFonts.montserratTextTheme(ThemeData.dark().textTheme),
       ),
-      home: const SplashView(),
     );
   }
 }

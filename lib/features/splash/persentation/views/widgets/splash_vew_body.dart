@@ -1,7 +1,7 @@
+import 'package:ebook_app/core/utils/app_router.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:go_router/go_router.dart';
 
-import '../../../../home/prsenteation/views/home_view.dart';
 import 'package:ebook_app/constant.dart';
 import 'package:ebook_app/core/utils/assets.dart';
 import 'sliding_text.dart';
@@ -56,9 +56,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
   }
 
   void naivgateToHome() {
-    Future.delayed(
-        kViewDuration,
-        () => Get.off(() => const HomeView(),
-            transition: Transition.fade, duration: kTranstionObjectDuration));
+    Future.delayed(kViewDuration,
+        () => GoRouter.of(context).pushReplacement(AppRouter.kHomeView));
   }
 }
