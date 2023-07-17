@@ -1,7 +1,7 @@
 import 'package:ebook_app/core/utils/assets.dart';
 import 'package:flutter/material.dart';
 
-import 'custom_listview_item.dart';
+import 'custom_book_image.dart';
 
 final List bookItem = [
   AssetsData.b1,
@@ -23,7 +23,7 @@ class FeatureListView extends StatelessWidget {
         itemCount: bookItem.length,
         itemBuilder: (context, index) => Padding(
           padding: const EdgeInsets.symmetric(horizontal: 10),
-          child: CustomListViewItem(
+          child: CustomBookImage(
             imageName: bookItem[index],
           ),
         ),
