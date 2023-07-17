@@ -1,8 +1,9 @@
-import 'package:ebook_app/core/utils/styles.dart';
-import 'package:ebook_app/features/home/prsenteation/views/widgets/book_rating.dart';
 import 'package:flutter/material.dart';
 
+import 'package:ebook_app/features/home/prsenteation/views/widgets/book_rating.dart';
+import 'package:ebook_app/core/utils/styles.dart';
 import 'package:ebook_app/core/utils/assets.dart';
+import 'book_action.dart';
 import 'custom_book_details_appbar.dart';
 import 'custom_book_image.dart';
 
@@ -32,6 +33,8 @@ class BookDetailViewBody extends StatelessWidget {
                       .copyWith(fontStyle: FontStyle.italic))),
           const SizedBox(height: 16),
           const BookRating(),
+          const SizedBox(height: 37),
+          const BoxAction(),
         ],
       ),
     );
