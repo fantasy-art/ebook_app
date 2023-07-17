@@ -1,3 +1,4 @@
+import 'package:ebook_app/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
 import 'package:ebook_app/core/utils/assets.dart';
@@ -18,7 +19,17 @@ class BookDetailViewBody extends StatelessWidget {
           Padding(
             padding: EdgeInsets.symmetric(horizontal: width * 0.2),
             child: const CustomBookImage(imageName: AssetsData.b1),
-          )
+          ),
+          const SizedBox(height: 43),
+          Text('Lost Legends',
+              style: Styles.textStyle24.copyWith(fontSize: 35)),
+          const SizedBox(height: 6),
+          Opacity(
+            opacity: 0.7,
+            child: Text('4 All-New Adventure',
+                style:
+                    Styles.textStyle16.copyWith(fontStyle: FontStyle.italic)),
+          ),
         ],
       ),
     );
