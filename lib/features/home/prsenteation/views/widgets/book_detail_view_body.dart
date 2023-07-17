@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'package:ebook_app/features/home/prsenteation/views/widgets/feature_similer_listview.dart';
 import 'package:ebook_app/features/home/prsenteation/views/widgets/book_rating.dart';
 import 'package:ebook_app/core/utils/styles.dart';
 import 'package:ebook_app/core/utils/assets.dart';
@@ -35,6 +36,17 @@ class BookDetailViewBody extends StatelessWidget {
           const BookRating(),
           const SizedBox(height: 37),
           const BoxAction(),
+          const SizedBox(height: 37),
+          Align(
+            alignment: Alignment.centerLeft,
+            child: Text(
+              'You Can Also Like:',
+              style: Styles.textStyle14
+                  .copyWith(fontWeight: FontWeight.w600, color: Colors.white),
+            ),
+          ),
+          const SizedBox(height: 12),
+          const FeatureSimilerListView(),
         ],
       ),
     );
