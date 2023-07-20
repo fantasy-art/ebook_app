@@ -29,7 +29,7 @@ class BookDetailSection extends StatelessWidget {
                 style:
                     Styles.textStyle16.copyWith(fontStyle: FontStyle.italic))),
         const SizedBox(height: 16),
-        const BookRating(),
+        const BookRating(raitng: 4, count: 308),
         const SizedBox(height: 37),
         const BoxAction(),
       ],

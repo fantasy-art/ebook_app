@@ -1,7 +1,6 @@
-import 'package:ebook_app/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../home/prsenteation/views/widgets/best_seller_listview_item.dart';
+import 'package:ebook_app/core/utils/styles.dart';
 import 'custom_search_textfield.dart';
 
 class SearchViewBody extends StatelessWidget {
@@ -33,7 +32,9 @@ class SearchResultListVeiw extends StatelessWidget {
       padding: EdgeInsets.zero,
       scrollDirection: Axis.vertical,
       itemCount: 5,
-      itemBuilder: (context, index) => const BookListViewItem(),
+      itemBuilder: (context, index) {
+        return; //const BookListViewItem(bookModels: BookModels());
+      },
     );
   }
 }
