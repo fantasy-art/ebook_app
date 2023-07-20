@@ -1,4 +1,3 @@
-import 'package:ebook_app/core/utils/assets.dart';
 import 'package:ebook_app/core/widgets/custom_error_widget.dart';
 import 'package:ebook_app/core/widgets/custom_loading_indecator.dart';
 import 'package:ebook_app/features/home/prsenteation/view_models/featured_books_cubit/featured_books_cubit.dart';
@@ -6,14 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'custom_book_image.dart';
-
-final List bookItem = [
-  AssetsData.b1,
-  AssetsData.b2,
-  AssetsData.b3,
-  AssetsData.b4,
-  AssetsData.b5,
-];
 
 class FeatureListView extends StatelessWidget {
   const FeatureListView({super.key});
