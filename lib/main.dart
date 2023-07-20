@@ -1,10 +1,16 @@
+import 'package:ebook_app/core/utils/service_locator.dart';
+import 'package:ebook_app/features/home/data/repos/home_repo_imple.dart';
+import 'package:ebook_app/features/home/prsenteation/view_models/featured_books_cubit/featured_books_cubit.dart';
+import 'package:ebook_app/features/home/prsenteation/view_models/newest_books_cubit/newest_books_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'package:ebook_app/constant.dart';
 import 'package:ebook_app/core/utils/app_router.dart';
 
 void main() {
+  setupServiceLocator();
   runApp(const EBookApp());
 }
 
@@ -13,12 +19,23 @@ class EBookApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      routerConfig: AppRouter.router,
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData.dark().copyWith(
-        scaffoldBackgroundColor: kPrimeryColor,
-        textTheme: GoogleFonts.montserratTextTheme(ThemeData.dark().textTheme),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) => FeaturedBooksCubit(getIt.get<HomeRepoImpl>()),
+        ),
+        BlocProvider(
+          create: (context) => NewestBooksCubit(getIt.get<HomeRepoImpl>()),
+        ),
+      ],
+      child: MaterialApp.router(
+        routerConfig: AppRouter.router,
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData.dark().copyWith(
+          scaffoldBackgroundColor: kPrimeryColor,
+          textTheme:
+              GoogleFonts.montserratTextTheme(ThemeData.dark().textTheme),
+        ),
       ),
     );
   }
