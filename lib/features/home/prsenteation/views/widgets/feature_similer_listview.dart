@@ -24,7 +24,7 @@ class FeatureSimilerListView extends StatelessWidget {
         itemBuilder: (context, index) => Padding(
           padding: const EdgeInsets.symmetric(horizontal: 5),
           child: CustomBookImage(
-            imageName: bookItem[index],
+            imageUrl: bookItem[index],
           ),
         ),
       ),

@@ -18,7 +18,7 @@ class BookDetailSection extends StatelessWidget {
         const CustomBookDetailsAppBar(),
         Padding(
           padding: EdgeInsets.symmetric(horizontal: width * 0.2),
-          child: const CustomBookImage(imageName: AssetsData.b1),
+          child: const CustomBookImage(imageUrl: AssetsData.b1),
         ),
         const SizedBox(height: 43),
         Text('Lost Legends', style: Styles.textStyle24.copyWith(fontSize: 35)),
